@@ -1,0 +1,48 @@
+* {
+  font-family: 'Alarabiya', sans-serif;
+  font-weight: normal !important;
+}
+
+
+.notifications-menu {
+    margin-right: 12px !important;
+    margin-left: 0px !important;
+}
+.header-img{
+    position: absolute;
+    object-fit: cover;
+    right:auto !important;
+    left: 0;
+    bottom: -6px;
+    height: 130%;
+  
+  }
+  @media (min-width: 768px) { /* md breakpoint */
+    .header-img{
+      right:auto;
+      left: 7rem; /* 28 * 0.25rem (Tailwind spacing) */
+    }
+  }
+
+ .diagnose-table tr,  .diagnose-table td{
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .navLink {
+    font-size: 18px;
+  }
+  .navLink::after{
+    bottom: -11px;
+  }
+  
+  .target-head {
+    color: #222222;
+    font-weight: bold;
+    font-size: 28px;
+  }
+  .target-sub {
+    color: #4A4C43;
+    font-weight: medium;
+    font-size: 22px;
+  }
