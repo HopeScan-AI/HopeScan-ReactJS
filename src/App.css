@@ -47,9 +47,9 @@
     flex-direction: column;
   }
 
-  .step-img svg {
-    height: 100px;
-  }
+  /* .step-img svg {
+    height: 80px;
+  } */
 
   .step:nth-child(2) {
     margin-top: 50px;
@@ -82,9 +82,28 @@
 }
 
 .service-card {
+  height: 300px;
   transition: 0.15s;
   background-color: white;
 
+}
+
+.service0-card {
+  height: 250px;
+  transition: 0.15s;
+  /* background-color: white; */
+  align-items:first baseline;
+
+}
+
+.paddingX{
+  padding: 5px;
+  width: 30%;
+}
+
+.paddingY{
+  padding: 0px;
+  width: 70%;
 }
 
 .service-card svg path {
@@ -482,6 +501,46 @@ button:focus {
 
 }
 
+.step-img {
+  position: relative;
+  /* object-fit: cover; */
+  right: 0;
+  bottom: 6px;
+  height: 220px;
+
+}
+
+
+.service-img {
+  position: relative;
+  /* object-fit: cover; */
+  right: 0;
+  bottom: -6px;
+  height: 40%;
+
+}
+
+.service0-img {
+  position: relative;
+  /* object-fit: cover; */
+  right: 0;
+  bottom: -6px;
+  height: 60%;
+
+}
+
+.center-text{
+  text-align: center;
+}
+
+.service-title {
+  color: rgb(222 109 175);
+}
+
+.service0-title {
+  color: #343f5f
+}
+
 @media (min-width: 768px) {
 
   /* md breakpoint */
@@ -513,7 +572,7 @@ button:focus {
 
 
 .ticket-bullet {
-  background: #ffffff;
+  background: #310933;
   color: #333;
   padding: 6px 18px;
   border-radius: 4px;
@@ -526,8 +585,8 @@ button:focus {
 
 .ticket-bullet:hover,
 .swiper-pagination-bullet-active {
-  background: #fbfaf9;
-  color: white;
+  background: #ea00ff;
+  color: #ea00ff;
 }
 
 

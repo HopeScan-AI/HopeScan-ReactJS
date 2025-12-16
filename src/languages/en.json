@@ -68,19 +68,22 @@
     }
   },
 
-  "landingPage": {
+  "landingPage": { 
     "header": {
       "slide1":{
-        "title":"AI-Driven Breast Cancer Detection",
-        "subtitle":"Experience the future of healthcare with intelligent, early-stage breast cancer diagnosis. Fast, accurate, and secure."
+        "heroTitle":"HopeScan AI – the smart solution for fast reading of mammogram images, providing quicker preliminary analysis and clearer clinical decisions with full privacy protection.",
+        "title":"",
+        "subtitle":""
       },
       "slide2":{
-        "title":"Test It Yourself",
-        "subtitle":"Upload a sample scan (we support DICOM, PNG, JPEG) to see how our AI interprets it. For demonstration purposes only. No personal data is stored."
+        "heroTitle":"HopeScan AI works to bridge technology and healthcare… improving early detection, saving lives, and transforming how breast cancer is diagnosed.",
+        "title":"",
+        "subtitle":""
       },
       "slide3":{
-        "title":"Fast. Accurate. Life-Saving Diagnostics",
-        "subtitle":"AI-powered breast cancer detection that delivers rapid, reliable results—empowering early treatment when it matters most."
+        "heroTitle":"HopeScan AI allows you to upload a breast X-ray anytime, from anywhere, and receive a clear AI-generated report within minutes — with no waiting and no uncertainty.",
+        "title":"",
+        "subtitle":""
       },
       "title": "AI-Powered mamography diagnostics at your fingers tips",
       "actionButton": "Get Started"
@@ -132,7 +135,7 @@
     },
 
     "services": {
-      "title": "Detail the platform’s core offerings",
+      "title": "Our Services",
       "description": "Advanced machine learning algorithms that analyze mammography images with unmatched accuracy.",
       "service1": "AI Mammography Analysis",
       "service2": "Detailed Diagnostic Reports",
@@ -140,24 +143,17 @@
       "service4": "Seamless Integration with Healthcare Systems"
     },
 
+    "services0": {
+      "title": "",
+      "description": "",
+      "service1": "For Individuals",
+      "service2": "For Healthcare Professionals",
+      "service3": "For Medical Institutions"
+    },
+
     "reviews": {
-      "title": "What Our Customers Say",
+      "title": "Testimonial",
       "reviewsList": [
-        {
-          "message": "These reviews can be posted on the company’s website, a third-party review platform, or social media. They typically include the customers' feedback.",
-          "author": "Eman Ali",
-          "profession": "Patient"
-        },
-        {
-          "message": "These reviews can be posted on the company’s website, a third-party review platform, or social media. They typically include the customers' feedback.",
-          "author": "Ahmed Yousef",
-          "profession": "Doctor"
-        },
-        {
-          "message": "These reviews can be posted on the company’s website, a third-party review platform, or social media. They typically include the customers' feedback.",
-          "author": "Sally Ahmed",
-          "profession": "Doctor"
-        }
       ]
     }
   },

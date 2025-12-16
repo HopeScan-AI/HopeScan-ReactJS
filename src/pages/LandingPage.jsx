@@ -35,11 +35,11 @@ const LandingPage = ({ sectionId }) => {
       <div id="home">
         <Header />
       </div>
-      <div>
-        <Features />
-        <Targets />
-        <InfoSection />
-      </div>
+      {/* <div> */}
+        {/* <Features /> */}
+        {/* <Targets /> */}
+        {/* <InfoSection /> */}
+      {/* </div> */}
       <div id="howitworks">
         <HowItWorks />
       </div>

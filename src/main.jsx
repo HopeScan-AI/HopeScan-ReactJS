@@ -17,6 +17,24 @@ if (document.documentElement.dir === "rtl") {
     .catch((err) => console.error("Error loading RTL styles:", err));
 }
 
+// Simple version check to force reload when new build is deployed
+(async function checkVersion() {
+  try {
+    const res = await fetch(`/version.txt?ts=${Date.now()}`, { cache: 'no-store' });
+    if (!res.ok) return;
+    const latest = (await res.text()).trim();
+    const current = localStorage.getItem('appVersion');
+    if (current && current !== latest) {
+      localStorage.clear();
+      sessionStorage.clear();
+      window.location.reload();
+      return;
+    }
+    localStorage.setItem('appVersion', latest);
+  } catch (err) {
+    console.error('Version check failed', err);
+  }
+})();
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>

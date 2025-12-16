@@ -1,0 +1,2 @@
+/api/*    https://hopescan.ai/:splat    200!
+/*        /index.html                   200

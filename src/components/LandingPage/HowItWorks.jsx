@@ -11,6 +11,11 @@ import PathMobile from "../../assets/icons/PathMobile";
 import { useTranslation } from "react-i18next";
 import { useLocation } from "react-router-dom";
 
+import step1 from "../../assets/images/step1.png";
+import step2 from "../../assets/images/step2.png";
+import step3 from "../../assets/images/step3.png";
+import step4 from "../../assets/images/step4.png";
+
 const HowItWorks = () => {
   const { t } = useTranslation();
   const { hash } = useLocation();
@@ -29,22 +34,26 @@ const HowItWorks = () => {
     {
       title: t("landingPage.howItWorks.step1.title"),
       description: t("landingPage.howItWorks.step1.description"),
-      image: <HowItWorks1 className={"w-[50px]"} />,
+      // image: <HowItWorks1 className={"w-[50px]"} />,
+      image: step1,
     },
     {
       title: t("landingPage.howItWorks.step2.title"),
       description: t("landingPage.howItWorks.step2.description"),
-      image: <HowItWorks2 />,
+      // image: <HowItWorks2 />,
+      image: step2,
     },
     {
       title: t("landingPage.howItWorks.step3.title"),
       description: t("landingPage.howItWorks.step3.description"),
-      image: <HowItWorks3 />,
+      // image: <HowItWorks3 />,
+      image: step3,
     },
     {
       title: t("landingPage.howItWorks.step4.title"),
       description: t("landingPage.howItWorks.step4.description"),
-      image: <HowItWorks4 />,
+      // image: <HowItWorks4 />,
+      image: step4,
     },
   ];
 
@@ -96,6 +105,7 @@ const HowItWorks = () => {
 
         <div className="mt-8 ">
           <div className="relative">
+            
             <svg
               width="510"
               height="1671"
@@ -267,7 +277,10 @@ const HowItWorks = () => {
           <div className="mt-[120px] lg:mt-[270px]">
             {steps.map((step, index) => (
               <div className="step relative" key={index}>
-                <div className="step-img">{step.image}</div>
+                {/* <div className="step-img">{step.image}</div> */}
+                <div className="step-img">
+                  <img src={step.image} className="step-img" alt="" />
+                </div>
                 <div className="pl-[70px] lg:p-0 lg:w-1/3 flex justify-start">
                   <div className=" ">
                     <span className="text-[28px] lg:text-[48px] text-[#000] opacity-15 leading-7">

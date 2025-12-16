@@ -1,13 +1,48 @@
 import queryString from "query-string";
 import ApiError from "./ApiError";
 
+// ================================
+// Browser Detection Helper
+// ================================
+const ua = navigator.userAgent;
+const vendor = navigator.vendor;
+
+const isChrome =
+  /Chrome/.test(ua) &&
+  /Google Inc/.test(vendor) &&
+  !/Edg/.test(ua) &&
+  !/OPR/.test(ua);
+
+const isEdge = /Edg/.test(ua);
+const isOpera = /OPR/.test(ua) || /Opera/.test(ua);
+const isFirefox = /Firefox/.test(ua);
+
+// ================================
+// API BASE URL per browser
+// ================================
+//
+// Chrome → use www.hopescan.ai  (works best with Chrome’s strict cookie policy)
+// Edge, Opera, Firefox → use hopescan.ai (to avoid their CORS quirks)
+//
+// You can adjust these rules if your backend behaves differently.
+//
+let apiBaseUrl;
+
+if (isChrome) {
+  apiBaseUrl = 'https://www.hopescan.ai';
+} else if (isEdge || isOpera || isFirefox) {
+  apiBaseUrl = 'https://hopescan.ai';
+} else {
+  // fallback for Safari or unknown browsers
+  apiBaseUrl = window.location.origin;
+}
+
+export const API_BASE_URL = apiBaseUrl;
+
+// ================================
+// Authentication Header Handling
+// ================================
 let authenticationHeaders = {};
-// export const API_BASE_URL = 'https://fayezmaliha.xyz';
-// export const API_BASE_URL = 'https://hopescan.org';
-export const API_BASE_URL = 'https://hopescan.ai';
-// export const API_BASE_URL = "http://localhost:8000";
-// export const API_BASE_URL = "3.79.243.10";
-// export const API_BASE_URL = "http://3.127.136.136:8000";
 
 export function setAuthenticationHeaders(value) {
   authenticationHeaders = value;
@@ -76,6 +111,7 @@ export default async function sendApiRequest(
     response = await fetch(fetchUrl, {
       body: requestBody,
       method,
+      //credentials: 'include',   // 👈 Add this line
       mode: "cors",
       headers: {
         ...headers,

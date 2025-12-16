@@ -25,40 +25,40 @@ const ReviewsSlider = () => {
     {
       starts: 5,
       message:
-        "These reviews can be posted on the compan’s website, a third party review platform social media. They typically include the customers",
-      author: "Eman Ali",
-      profession: "Pacient",
+        "HopeScan, as a decision-support tool, helps us triage mammograms quickly and identify cases that need urgent review. It doesn’t replace the radiologist’s role, but it definitely streamlines the workflow and strengthens diagnostic confidence.",
+      author: "Dr. Nora",
+      profession: "Radiology Specialist, Gaza",
       image: "",
     },
     {
       starts: 5,
       message:
-        "These reviews can be posted on the compan’s website, a third party review platform social media. They typically include the customers",
-      author: "Ahmed Yousef",
-      profession: "Doctor",
+        "If applied in our clinics, I expect HopeScan will improve referrals and reduce unnecessary follow-ups. What matters most to me is that its outputs are clear, reviewable, and support medical reasoning — which this system provides.",
+      author: "Dr. Hossam",
+      profession: "Women’s Health Physician, Ramallah",
       image: "",
     },
     {
       starts: 5,
       message:
-        "These reviews can be posted on the compan’s website, a third party review platform social media. They typically include the customers",
-      author: "Sally Ahmed",
-      profession: "Doctor",
+        "The system helps us know which images need to be read first, so we can organize our workday better. I also appreciate that it focuses heavily on privacy — that’s essential for the women we serve.",
+      author: "Rana",
+      profession: "Mammogram Technician, Khan Younis",
       image: "",
     },
     {
       starts: 5,
       message:
-        "These reviews can be posted on the compan’s website, a third party review platform social media. They typically include the customers",
-      author: "Eman Ali",
-      profession: "Pacient",
+        "I felt that this technology brings reassurance and speed without compromising privacy. If clinics use HopeScan with proper explanation, it makes the follow-up decision much easier for us as women.",
+      author: "Sara",
+      profession: "Participant in Awareness Campaign, Deir al-Balah",
       image: "",
     },
     {
       starts: 5,
       message:
-        "These reviews can be posted on the compan’s website, a third party review platform social media. They typically include the customers",
-      author: "Ahmed Yousef",
+        "For successful adoption, we’re interested in clear options for hosting, backup, and maintenance, along with compliance standards. With those in place and a solid support system, I truly believe the tool can be sustainable.",
+      author: "Layan",
       profession: "Doctor",
       image: "",
     },
@@ -227,11 +227,11 @@ const ReviewsSlider = () => {
 
               <div className="flex justify-between mt-6">
                 <div className="flex gap-4 ">
-                  <img
+                  {/* <img
                     src=""
                     alt=""
                     className="w-[45px] h-[45px] bg-[#E8E8E8] rounded-full cover"
-                  />
+                  /> */}
                   <div className="w-[0.2px] bg-[#D73C96]"></div>
                   <div className="flex flex-col">
                     <span className="text-[15px] text-[#000] font-semibold">
