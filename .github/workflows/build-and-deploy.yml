@@ -1,0 +1,51 @@
+name: Build React App and Deploy to Flask Server
+
+on:
+  push:
+    branches:
+      - main  # Trigger on push to the main branch
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the ReactJS repository
+      - name: Checkout ReactJS repo
+        uses: actions/checkout@v3
+
+      # Set up Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 22  
+
+      # Install dependencies and build the React app
+      - name: Install dependencies and build
+        run: |
+          npm install
+          npm run build  # This generates the `dist` folder
+
+      # Checkout the FlaskServer repository
+      - name: Checkout FlaskServer repo
+        uses: actions/checkout@v3
+        with:
+          repository: MohammedHasan-99/HopeScan-FlaskServer
+          token: ${{ secrets.TARGET_REPO_TOKEN }}
+          path: HopeScan-FlaskServer  # Use the repository name as the folder name
+
+      # Copy the dist folder to the FlaskServer repository
+      - name: Copy dist folder
+        run: |
+          rm -rf HopeScan-FlaskServer/app/dist  # Remove existing dist folder
+          cp -r dist HopeScan-FlaskServer/app/dist  # Copy new dist folder
+
+      # Commit and push changes to the FlaskServer repository
+      - name: Commit and push changes
+        run: |
+          cd HopeScan-FlaskServer
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git add .
+          git commit -m "Automated update: Deploy React app dist folder"
+          git push
